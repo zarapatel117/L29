@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Await and Async
+        </title>
+    </head>
+    <body>
+          <h2>JS async and awake</h2>
+          <p id="demo"></p>
+          <script>
+            async function add(a,b) {
+                let response = await a+b;
+                display(response);
+            }
+            function display(some) {
+                document.getElementById("demo").innerHTML=some;
+            }
+            add(5,20);
+          </script>
+    </body>
+</html>
