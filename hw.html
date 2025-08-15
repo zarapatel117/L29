@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Async Await Example - No Delay</title>
+</head>
+<body>
+
+<h2>Async/Await Demo (Instant)</h2>
+<button onclick="showMessage()">Get Message</button>
+
+<p id="output"></p>
+
+<script>
+
+  function getMessage() {
+    return Promise.resolve(" Hello! This message was fetched instantly.");
+  }
+
+  async function showMessage() {
+    document.getElementById("output").textContent = "Loading...";
+    let message = await getMessage();
+    document.getElementById("output").textContent = message;
+  }
+</script>
+
+</body>
+</html>
